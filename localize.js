@@ -3,9 +3,9 @@ function localize(locales) { //0.1.0; TODO: force lang and object->text->regexp-
 	var page=window.location.toString().replace(/\/$/,'/index.html');
 
 	if (locales.includes(locale)) {	
-		var localize=page.replace(/\.html$/i,`.${locale}.htm`);
+		var localized=page.replace(/\.html$/i,`.${locale}.htm`);
 	} else {
-		var localize=page.replace(/\.html$/i,`.${locales[0]}.htm`);
+		var localized=page.replace(/\.html$/i,`.${locales[0]}.htm`);
 	}
-	document.getElementById('main').innerHTML=`<object data="${localize}">`;
+	document.getElementById('main').innerHTML=`<object data="${localized}">`;
 }
